@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>example</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body{
+				background-color: black;
+			}
+			canvas{
+				background-color: white;
+				width: 500px;
+				height: 500px;
+			}
+			#수식{
+				width: 400px;
+			}
+			#배율{
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" height="1000px" width="1000px"></canvas>
+		<br><input type="text" name="수식" id="수식" value="ln(abs(x))"><br>
+		<button onclick="지우기()">지우기</button>
+		<button onclick="그래프()">그래프</button>
+		<button onclick="미분그래프()">미분 그래프</button>
+		<button onclick="적분그래프()">적분 그래프</button>
+		<input type="number" name="배율" id="배율" value="50" onchange="지우기()">
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

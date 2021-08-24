@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>딥러닝</title>
+	<script src="./gpu-browser.min.js"></script>
+	<style>
+		html{
+			background-color: black;
+			margin: 20px;
+		}
+		.grid{
+			display: grid;
+			grid-template-columns: 560px 300px;
+			background-color: white;
+			padding: 30px;
+		}
+		.container{
+			padding: 25px;
+		}
+		canvas{
+			width: 500px;
+			height: 500px;
+			border: 3px solid black;
+		}
+		.layer{
+			width: auto;
+			padding: 1rem;
+			border-radius: 10px 10px 10px 10px;
+			border: 1px solid gray;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="grid">
+		<div class="container">
+			<h1>Cost : <span id="cost">0</span></h1>
+			<canvas id="canvas" width="2000" height="2000"></canvas>
+			<canvas id="canvas1" width="2000" height="2000" style="display: none"></canvas>
+		</div>
+		<div class="container" style="display: none;border-left: 1px solid black;">
+			<div>
+				레이어 수 : <input type="number" name="레이어 수" value="1" style="width:50px;"><br><br>
+				<div class="layer">
+					<div class="option1">
+						레이어 이름 : <input type="text" name="name" value="레이어" placeholder="레이어 이름" style="width:100px;"><br>
+						레이어 종류 : 
+						<select>
+							<option value="">일반 신경망</option>
+							<option value="">합성곱 신경망</option>
+						</select><br>
+						<div class="option2">
+							파라미터 개수 : <input type="number" name="파라미터개수" value="3" style="width:50px;">
+						</div><br>
+						<button>레이어 삭제</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

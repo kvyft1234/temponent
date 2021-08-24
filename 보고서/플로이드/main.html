@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>플로이드</title>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		canvas{
+			background-color: white;
+		}
+		button{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="cvs1" width="500px" height="500px"></canvas>
+	<div>
+		<input type="number" name="정점 개수" id="count">
+		<button onclick="setNodeValue()">초기화하기</button>
+		<button onclick="console.log(floyd())">계산하기</button>
+	</div>
+	<canvas id="cvs2" width="500px" height="500px"></canvas>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
